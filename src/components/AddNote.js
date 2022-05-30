@@ -12,6 +12,8 @@ function AddNote({ handleAddNote }) {
     // Validate that the user does enter at least one char in the note
     if (noteText.trim().length > 0) {
       handleAddNote(noteText);
+      // After adding the note, set the preview note back to being empty
+      setNoteText('');
     }
   };
 
