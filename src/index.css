@@ -55,6 +55,7 @@ textarea:focus{
 
 .note{
   white-space: pre-wrap;
+  overflow-wrap: break-word;
   background-color: #fef68a;
   border-radius: 10px;
   padding: 1rem;
