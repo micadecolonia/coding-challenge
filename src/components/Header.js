@@ -5,7 +5,7 @@ import { MdOutlineDarkMode } from 'react-icons/md';
 function Header({ handleToggleDarkMode }) {
   return (
     <div className="header">
-      <h1>Notes dashboard</h1>
+      <h1>My notes dashboard</h1>
       <MdOutlineDarkMode onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)} className="save" />
     </div>
   );
