@@ -9,7 +9,10 @@ function AddNote({ handleAddNote }) {
   };
 
   const handleSaveClick = () => {
-    handleAddNote(noteText);
+    // Validate that the user does enter at least one char in the note
+    if (noteText.trim().length > 0) {
+      handleAddNote(noteText);
+    }
   };
 
   return (
