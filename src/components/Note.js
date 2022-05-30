@@ -17,7 +17,7 @@ function Note({
 }
 
 Note.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   handleDeleteNote: PropTypes.func.isRequired,
