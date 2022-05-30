@@ -1,7 +1,6 @@
-import { MdDeleteForever } from 'react-icons/md';
+import { MdEdit, MdDeleteForever } from 'react-icons/md';
 import PropTypes from 'prop-types';
 
-// eslint-disable-next-line no-unused-vars
 function Note({
   id, text, date, handleDeleteNote,
 }) {
@@ -10,8 +9,9 @@ function Note({
       <div className="note-header">
         <small>{date}</small>
         <MdDeleteForever onClick={() => handleDeleteNote(id)} className="delete-icon" size="1.3em" />
+        <MdEdit className="edit-icon" size="1.3em" />
       </div>
-      <span>{text}</span>
+      <span id="note-text">{text}</span>
     </div>
   );
 }
