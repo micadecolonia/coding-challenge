@@ -3,7 +3,6 @@ import { nanoid } from 'nanoid';
 import NotesList from './components/NotesList';
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
   const [notes, setNotes] = useState([{
     id: nanoid(),
     text: 'Hello world - This is my first note!',
@@ -21,7 +20,14 @@ function App() {
   }]);
 
   const addNote = (text) => {
-    console.log(text);
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      text,
+      date: date.toLocaleDateString(),
+    };
+    const newNotes = [...notes, newNote];
+    setNotes(newNotes);
   };
 
   return (
