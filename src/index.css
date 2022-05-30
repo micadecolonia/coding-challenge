@@ -53,6 +53,10 @@ textarea:focus{
   cursor:pointer;
 }
 
+.delete-icon{
+  cursor: pointer;
+}
+
 .note{
   white-space: pre-wrap;
   overflow-wrap: break-word;
