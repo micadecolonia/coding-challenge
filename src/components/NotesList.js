@@ -15,7 +15,8 @@ function NotesList({ notes, handleAddNote, handleDeleteNote }) {
 }
 
 NotesList.propTypes = {
-  notes: PropTypes.element.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  notes: PropTypes.array.isRequired,
   handleAddNote: PropTypes.func.isRequired,
   handleDeleteNote: PropTypes.func.isRequired,
 };
