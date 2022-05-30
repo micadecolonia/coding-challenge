@@ -5,7 +5,10 @@ function AddNote({ handleAddNote }) {
   const [noteText, setNoteText] = useState('');
 
   const handleChange = (event) => {
-    setNoteText(event.target.value);
+    // Validate it does not exceed the 300 char limit
+    if (300 - event.target.value.length >= 0) {
+      setNoteText(event.target.value);
+    }
   };
 
   const handleSaveClick = () => {
