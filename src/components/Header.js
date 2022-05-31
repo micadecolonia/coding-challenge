@@ -8,8 +8,8 @@ function Header({ handleToggleDarkMode }) {
 
   return (
     <div className="header">
-      <h1>My notes dashboard</h1>
-      <MdOutlineDarkMode onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)} className="save" />
+      <h1 id="page-title">My notes dashboard</h1>
+      <MdOutlineDarkMode onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)} className="moon" />
       <MdDeleteForever onClick={() => history.push('/trash')} className="delete-icon" size="2em" color="red" />
     </div>
   );
