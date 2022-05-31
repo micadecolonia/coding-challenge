@@ -18,6 +18,10 @@ code {
   justify-content: space-between;
 }
 
+#page-title{
+  flex: 2;
+}
+
 .dark-mode{
   background-color: black;
 }
@@ -73,6 +77,21 @@ textarea:focus{
   outline:none;
 }
 
+.moon{
+  cursor:pointer;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.moon:hover{
+  background-color: grey;
+  cursor:pointer;
+}
+
 .save{
   margin-top: 15px;
   background-color: white;
@@ -112,4 +131,22 @@ textarea:focus{
   display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.back-lnk{
+  border-radius: 25px;
+  margin-bottom: 1.2em;
+  display: flex;
+  align-items: center;
+  background-color: #27187a;
+  color: white;
+  padding: 10px;
+  position: relative;
+  width: 15px;
+}
+
+.back-lnk:hover {
+  background-color: rgb(177, 176, 176);
+  color: black;
+  cursor: pointer;
 }
