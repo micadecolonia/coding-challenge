@@ -44,7 +44,7 @@ code {
   align-items: center;
   background-color: rgb(209, 209, 209);
   border-radius: 10px;
-  padding: 5px;
+  padding: 12px;
   margin-bottom: 1.5em;
 }
 
@@ -135,18 +135,38 @@ textarea:focus{
 
 .back-lnk{
   border-radius: 25px;
-  margin-bottom: 1.2em;
-  display: flex;
-  align-items: center;
   background-color: #27187a;
   color: white;
   padding: 10px;
   position: relative;
-  width: 15px;
+  size: 1.3rem;
+  border: 2px solid black;
 }
 
 .back-lnk:hover {
   background-color: rgb(177, 176, 176);
   color: black;
   cursor: pointer;
+}
+
+#delete-all-btn{
+  border-radius: 25px;
+  background-color: #27187a;
+  color: white;
+  padding: 10px;
+  position: relative;
+  border: 2px solid black;
+}
+
+#delete-all-btn:hover{
+  background-color: rgb(177, 176, 176);
+  color: black;
+  cursor: pointer;
+}
+
+.control-btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
 }
