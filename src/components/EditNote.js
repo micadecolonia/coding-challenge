@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
+const date = new Date();
 function EditNote({ note, handleEditNote, handleIsEdit }) {
   const [noteText, setNoteText] = useState(note);
 
@@ -9,6 +10,7 @@ function EditNote({ note, handleEditNote, handleIsEdit }) {
     if (300 - event.target.value.length >= 0) {
       setNoteText((prevState) => ({
         ...prevState,
+        date: `Edited on ${date.toLocaleDateString()}`,
         text: event.target.value,
       }));
     }
