@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { MdOutlineDarkMode, MdDeleteForever } from 'react-icons/md';
 import { useHistory, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function HeaderView() {
   const location = useLocation();
@@ -17,12 +18,14 @@ function HeaderView() {
 
 function Header({ handleToggleDarkMode }) {
   const history = useHistory();
+  const { totalNotes } = useSelector((state) => state.trash);
 
   return (
     <div className="header">
       <h1 id="page-title">{HeaderView()}</h1>
       <MdOutlineDarkMode onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)} className="moon" />
       <MdDeleteForever onClick={() => history.push('/trash')} className="delete-icon" size="2em" color="red" />
+      <p id="trash-count">{totalNotes}</p>
     </div>
   );
 }
