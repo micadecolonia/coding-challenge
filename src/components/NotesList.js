@@ -3,7 +3,7 @@ import Note from './Note';
 import AddNote from './AddNote';
 
 function NotesList({
-  notes, handleAddNote, handleDeleteNote, isEdit, handleIsEdit, handleEditNote,
+  notes, handleAddNote, handleDeleteNote, isEdit, isDelete, handleIsEdit, handleEditNote,
 }) {
   return (
     <div className="notes-list">
@@ -11,16 +11,15 @@ function NotesList({
         <Note
           // eslint-disable-next-line react/no-array-index-key
           key={index}
-          id={note.id}
-          text={note.text}
-          date={note.date}
+          note={note}
           handleDeleteNote={handleDeleteNote}
           handleEditNote={handleEditNote}
           isEdit={isEdit}
+          isDelete={isDelete}
           handleIsEdit={handleIsEdit}
         />
       ))}
-      <AddNote handleAddNote={handleAddNote} />
+      {!isDelete && <AddNote handleAddNote={handleAddNote} />}
     </div>
   );
 }
@@ -32,6 +31,7 @@ NotesList.propTypes = {
   handleDeleteNote: PropTypes.func.isRequired,
   handleEditNote: PropTypes.func.isRequired,
   isEdit: PropTypes.bool.isRequired,
+  isDelete: PropTypes.bool.isRequired,
   handleIsEdit: PropTypes.func.isRequired,
 };
 
