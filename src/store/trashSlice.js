@@ -10,21 +10,17 @@ const trashSlide = createSlice({
     addToTrash: (state, action) => {
       const toTrash = {
         lastNoteCreatedAt: new Date().toTimeString().slice(0, 8),
-        totalNotes: state.notes.length + 1,
-        trash: [...state.notes, action.payload],
+        totalNotes: state.trash.length + 1,
+        trash: [...state.trash, action.payload],
       };
       return toTrash;
     },
     removeFromTrash: (state, action) => {
+      // TODO Add note back to notes
       const removeFrom = {
         lastNoteCreatedAt: new Date().toTimeString().slice(0, 8),
-        totalNotes: state.notes.length,
-        trash: state.notes.map((note) => {
-          if (note.id === action.payload.id) {
-            return action.payload;
-          }
-          return note;
-        }),
+        totalNotes: state.trash.length,
+        trash: state.trash.filter((note) => note.id !== action.payload.id),
       };
       return removeFrom;
     },

@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import NotesList from '../components/NotesList';
 import SearchNote from '../components/SearchNote';
 import { addNote, deleteNote, editNote } from '../store/notesSlice';
+import { addToTrash } from '../store/trashSlice';
+
 import AddNote from '../components/AddNote';
 
 function Dashboard() {
@@ -23,6 +25,9 @@ function Dashboard() {
   };
 
   const deleteN = (note) => {
+    // TODO add note to the trash
+    dispatch(addToTrash(note));
+    // TODO delete note from notes array
     dispatch(deleteNote(note));
   };
 
@@ -41,6 +46,7 @@ function Dashboard() {
             handleDeleteNote={deleteN}
             handleEditNote={editN}
             isEdit={isEdit}
+            isDelete={false}
             handleIsEdit={setIsEdit}
           />
         )

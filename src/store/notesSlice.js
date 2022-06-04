@@ -29,6 +29,7 @@ export const noteSlide = createSlice({
       return editNote;
     },
     deleteNote: (state, action) => {
+      // TODO Add note to the trash
       const deleteNote = {
         lastNoteDeletedAt: new Date().toTimeString().slice(0, 8),
         totalNotes: state.notes.length - 1,
