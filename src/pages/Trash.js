@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { MdOutlineArrowBack } from 'react-icons/md';
+import { FaRegGrinBeam } from 'react-icons/fa';
 import NotesList from '../components/NotesList';
 import { addToTrash, removeFromTrash, removeAllTrash } from '../store/trashSlice';
 import { addNote } from '../store/notesSlice';
@@ -50,7 +51,12 @@ function Trash() {
             handleIsEdit={() => () => {}}
           />
         )
-        : (<h2>There are no elements in the trash!</h2>)}
+        : (
+          <div className="empty-trash">
+            <h2>Yay! There are no elements in the trash!</h2>
+            <FaRegGrinBeam size="1.3em" />
+          </div>
+        )}
 
     </>
 

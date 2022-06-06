@@ -168,6 +168,13 @@ textarea:focus{
   cursor: pointer;
 }
 
+.empty-trash{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .control-btns{
   display: flex;
   justify-content: space-between;
