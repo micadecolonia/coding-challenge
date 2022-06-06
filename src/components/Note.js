@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { MdDeleteForever, MdEdit, MdUndo } from 'react-icons/md';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
 import EditNote from './EditNote';
 
 // eslint-disable-next-line no-unused-vars
@@ -9,8 +8,6 @@ function Note({
   note, handleDeleteNote, handleRemoveFromTrash, isEdit, isDelete, handleIsEdit, handleEditNote,
 }) {
   const [isSelectedId, setIselectedId] = useState(null);
-  const { totalNotes } = useSelector((state) => state.trash);
-  const isOnlyOneNoteLeft = totalNotes === 1;
 
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -26,14 +23,13 @@ function Note({
           />
         )
         : (
-          <div className={`note ${isOnlyOneNoteLeft ? 'deleted-note' : ''}`} style={{ backgroundColor: note.color }}>
+          <div className="note" style={{ backgroundColor: note.color }}>
             <div className="note-header">
               <small>{note.date}</small>
               {/* // TODO If it is deleting, do not show edit or delete icons */}
               {!isDelete ? (
 
                 <>
-
                   <MdDeleteForever onClick={() => handleDeleteNote(note)} className="delete-icon" size="1.3em" />
                   <MdEdit
                     onClick={() => {
