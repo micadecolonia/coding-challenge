@@ -120,10 +120,6 @@ textarea:focus{
   flex-direction: column;
 }
 
-.deleted-note{
-  margin-left: auto;
-}
-
 .delete-icon, .edit-icon{
   cursor: pointer;
   display: inline;
