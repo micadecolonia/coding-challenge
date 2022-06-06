@@ -4,7 +4,7 @@ import ColorSelector from './ColorSelector/Index';
 
 function AddNote({ handleAddNote }) {
   const [noteText, setNoteText] = useState('');
-  const [noteColor, setNoteColor] = useState('grey');
+  const [noteColor, setNoteColor] = useState('gainsboro');
 
   const handleChange = (event) => {
     // Validate it does not exceed the 300 char limit
@@ -28,7 +28,7 @@ function AddNote({ handleAddNote }) {
 
   return (
     <div className="note new" style={{ backgroundColor: noteColor }}>
-      <textarea rows="8" cols="10" placeholder="Type to add a note..." value={noteText} onChange={handleChange} />
+      <textarea rows="8" cols="10" placeholder="Type to add a note..." value={noteText} onChange={handleChange} style={{ backgroundColor: noteColor }} />
       <div className="note-footer">
         <ColorSelector handleChangeColor={handleChangeColor} />
         <button type="button" className="save" onClick={handleSaveClick}>Save</button>
