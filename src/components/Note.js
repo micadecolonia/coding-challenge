@@ -25,7 +25,7 @@ function Note({
         : (
           <div className="note" style={{ backgroundColor: note.color }}>
             <div className="note-header">
-              <small>{note.date}</small>
+
               {/* // TODO If it is deleting, do not show edit or delete icons */}
               {!isDelete ? (
 
@@ -41,8 +41,8 @@ function Note({
                   />
                 </>
               )
-                : (<MdUndo onClick={() => handleRemoveFromTrash(note)} className="save" />)}
-
+                : (<MdUndo title="Restore note" onClick={() => handleRemoveFromTrash(note)} className="restore" />)}
+              <small>{note.date}</small>
               {/* // TODO Add button to take out from the trash */}
             </div>
             <span>{note.text}</span>

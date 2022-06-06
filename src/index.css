@@ -175,6 +175,20 @@ textarea:focus{
   align-items: center;
 }
 
+.restore{
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  display: inline;
+  float: right;
+}
+
+.restore:hover{
+  background-color: grey;
+  cursor:pointer;
+}
+
 .control-btns{
   display: flex;
   justify-content: space-between;
