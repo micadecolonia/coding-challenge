@@ -19,7 +19,8 @@ const trashSlide = createSlice({
       // TODO Add note back to notes
       const removeFrom = {
         lastNoteCreatedAt: new Date().toTimeString().slice(0, 8),
-        totalNotes: state.trash.length,
+        // Fixed this, added -1
+        totalNotes: state.trash.length - 1,
         trash: state.trash.filter((note) => note.id !== action.payload.id),
       };
       return removeFrom;
