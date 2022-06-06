@@ -15,10 +15,11 @@ function Dashboard() {
   const [isEdit, setIsEdit] = useState(false);
   const date = new Date();
 
-  const addN = (text) => {
+  const addN = (text, color) => {
     const newNote = {
       id: nanoid(),
       text,
+      color,
       date: date.toLocaleDateString(),
     };
     dispatch(addNote(newNote));
@@ -44,6 +45,7 @@ function Dashboard() {
             notes={notes.filter((note) => note.text.toLowerCase().includes(searchText))}
             handleAddNote={addN}
             handleDeleteNote={deleteN}
+            handleRemoveFromTrash={() => () => {}}
             handleEditNote={editN}
             isEdit={isEdit}
             isDelete={false}
