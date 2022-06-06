@@ -35,19 +35,22 @@ function Trash() {
           Permanently delete all notes
         </button>
       </div>
-      <NotesList
-        notes={trash}
-        handleAddToTrash={addToT}
-        handleAddNote={() => () => {}}
-        handleEditNote={() => () => {}}
-        handleDeleteNote={() => () => {}}
-        handleRemoveFromTrash={removeFromT}
-        handleRemoveAllTrash={removeAllT}
-        isEdit={false}
+      {trash && trash.length > 0
+        ? (
+          <NotesList
+            notes={trash}
+            handleAddToTrash={addToT}
+            handleAddNote={() => () => {}}
+            handleEditNote={() => () => {}}
+            handleDeleteNote={() => () => {}}
+            handleRemoveFromTrash={removeFromT}
+            isEdit={false}
         // eslint-disable-next-line react/jsx-boolean-value
-        isDelete={true}
-        handleIsEdit={() => () => {}}
-      />
+            isDelete={true}
+            handleIsEdit={() => () => {}}
+          />
+        )
+        : (<h2>There are no elements in the trash!</h2>)}
 
     </>
 

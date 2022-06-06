@@ -3,7 +3,8 @@ import Note from './Note';
 import AddNote from './AddNote';
 
 function NotesList({
-  notes, handleAddNote, handleDeleteNote, isEdit, isDelete, handleIsEdit, handleEditNote,
+  notes, handleAddNote, handleDeleteNote,
+  handleRemoveFromTrash, isEdit, isDelete, handleIsEdit, handleEditNote,
 }) {
   return (
     <div className="notes-list">
@@ -13,6 +14,7 @@ function NotesList({
           key={index}
           note={note}
           handleDeleteNote={handleDeleteNote}
+          handleRemoveFromTrash={handleRemoveFromTrash}
           handleEditNote={handleEditNote}
           isEdit={isEdit}
           isDelete={isDelete}
@@ -29,6 +31,7 @@ NotesList.propTypes = {
   notes: PropTypes.array.isRequired,
   handleAddNote: PropTypes.func.isRequired,
   handleDeleteNote: PropTypes.func.isRequired,
+  handleRemoveFromTrash: PropTypes.func.isRequired,
   handleEditNote: PropTypes.func.isRequired,
   isEdit: PropTypes.bool.isRequired,
   isDelete: PropTypes.bool.isRequired,
