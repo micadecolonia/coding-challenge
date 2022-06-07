@@ -23,8 +23,8 @@ function Header({ handleToggleDarkMode }) {
   return (
     <div className="header">
       <h1 id="page-title">{HeaderView()}</h1>
-      <MdOutlineDarkMode onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)} className="moon" />
-      <MdDeleteForever onClick={() => history.push('/trash')} className="delete-icon" size="2em" color="red" />
+      <MdOutlineDarkMode title="Enable or disable dark mode" onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)} className="moon" />
+      <MdDeleteForever title="Go to the trash screen" onClick={() => history.push('/trash')} className="delete-icon" size="2em" color="red" />
       <p id="trash-count">{totalNotes}</p>
     </div>
   );

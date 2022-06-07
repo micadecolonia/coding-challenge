@@ -13,7 +13,7 @@ function Note({
     // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {
-      // TODO Change that from id received from params
+      // Only edits the note that receives from params
       isEdit && note.id === isSelectedId
         ? (
           <EditNote
@@ -26,12 +26,18 @@ function Note({
           <div className="note" style={{ backgroundColor: note.color }}>
             <div className="note-header">
 
-              {/* // TODO If it is deleting, do not show edit or delete icons */}
+              {/* // If it is deleting, it does not show edit or delete icons */}
               {!isDelete ? (
 
                 <>
-                  <MdDeleteForever onClick={() => handleDeleteNote(note)} className="delete-icon" size="1.3em" />
+                  <MdDeleteForever
+                    title="Delete note"
+                    onClick={() => handleDeleteNote(note)}
+                    className="delete-icon"
+                    size="1.3em"
+                  />
                   <MdEdit
+                    title="Edit note"
                     onClick={() => {
                       setIselectedId(note.id);
                       handleIsEdit(true);
@@ -41,9 +47,14 @@ function Note({
                   />
                 </>
               )
-                : (<MdUndo title="Restore note" onClick={() => handleRemoveFromTrash(note)} className="restore" />)}
+                : (
+                  <MdUndo
+                    title="Restore note"
+                    onClick={() => handleRemoveFromTrash(note)}
+                    className="restore"
+                  />
+                )}
               <small>{note.date}</small>
-              {/* // TODO Add button to take out from the trash */}
             </div>
             <span>{note.text}</span>
           </div>

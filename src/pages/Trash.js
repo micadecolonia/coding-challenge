@@ -30,9 +30,9 @@ function Trash() {
     <>
       <div className="control-btns">
         <Link to="/" className="back-lnk">
-          <MdOutlineArrowBack />
+          <MdOutlineArrowBack title="Go back to dashboard" />
         </Link>
-        <button type="button" id="delete-all-btn" onClick={removeAllT}>
+        <button title="Permanently delete all notes" type="button" id="delete-all-btn" onClick={removeAllT}>
           Permanently delete all notes
         </button>
       </div>
@@ -54,7 +54,7 @@ function Trash() {
         : (
           <div className="empty-trash">
             <h2>Yay! There are no elements in the trash!</h2>
-            <FaRegGrinBeam size="1.3em" />
+            <FaRegGrinBeam title="Happy face" size="1.3em" />
           </div>
         )}
 
