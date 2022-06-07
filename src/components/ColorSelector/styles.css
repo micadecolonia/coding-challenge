@@ -22,16 +22,16 @@
     padding-left: 0;
   }
   
-  .color_bar_list_active {
-    height: 100px;
-    padding-left: 0;
-  }
-  
   .color_bar_list_item {
     border-radius: 50%;
+    opacity: 1;
     height: 24px;
     width: 24px;
     list-style: none;
     cursor: pointer;
     border: 1px solid black;
     }
+
+   .color_bar_list_item:hover{
+    opacity: 0.5;
+   }
