@@ -78,11 +78,11 @@ textarea{
 }
 
 textarea:focus{
-  outline:none;
+  outline: none;
 }
 
 .moon{
-  cursor:pointer;
+  cursor: pointer;
   background-color: white;
   border: none;
   border-radius: 15px;
@@ -93,7 +93,7 @@ textarea:focus{
 
 .moon:hover{
   background-color: grey;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .save{
@@ -102,11 +102,12 @@ textarea:focus{
   border: none;
   border-radius: 15px;
   padding: 5px 10px 5px 10px;
+  border: 1px solid black;
 }
 
 .save:hover{
   background-color: grey;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .note{
@@ -144,7 +145,7 @@ textarea:focus{
   padding: 10px;
   position: relative;
   size: 1.3rem;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .back-lnk:hover {
@@ -159,7 +160,7 @@ textarea:focus{
   color: white;
   padding: 10px;
   position: relative;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 #delete-all-btn:hover{
@@ -186,7 +187,7 @@ textarea:focus{
 
 .restore:hover{
   background-color: grey;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .control-btns{
@@ -194,4 +195,19 @@ textarea:focus{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5em;
+}
+
+.signature{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 10px;
+  bottom: 0px;
+}
+
+#click{
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid black;
 }

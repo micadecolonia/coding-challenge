@@ -36,6 +36,12 @@ function Dashboard() {
     dispatch(editNote(noteEdit));
   };
 
+  const [buttonText, setButtonText] = useState('Click me!');
+
+  const handleClick = () => {
+    setButtonText('Coding challenge, May 2022 - Micaela Rodriguez');
+  };
+
   return (
     <>
       <SearchNote handleSearchNote={setSearchText} />
@@ -53,7 +59,13 @@ function Dashboard() {
           />
         )
         : (<AddNote handleAddNote={addN} />)}
-
+      <footer className="signature">
+        <button id="click" className="signature" type="button" onClick={handleClick} title="Click me" size="1.3em">
+          {' '}
+          {buttonText}
+          {' '}
+        </button>
+      </footer>
     </>
   );
 }
