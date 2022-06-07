@@ -53,8 +53,8 @@ function Trash() {
         )
         : (
           <div className="empty-trash">
-            <h2>Yay! There are no elements in the trash!</h2>
-            <FaRegGrinBeam title="Happy face" size="1.3em" />
+            <h2 id="trash-txt">Yay! There are no elements in the trash!</h2>
+            <FaRegGrinBeam id="happy-icn" title="Happy face" size="1.3em" />
           </div>
         )}
 

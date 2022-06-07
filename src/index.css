@@ -34,6 +34,14 @@ code {
   color: white;
 }
 
+.dark-mode h2{
+  color: white;
+}
+
+.dark-mode #happy-icn{
+  color: white;
+}
+
 .container{
   max-width: 960px;
   margin-right: auto;
@@ -96,10 +104,14 @@ textarea:focus{
   cursor: pointer;
 }
 
+#trash-count{
+  font-weight: bold;
+  color: red;
+}
+
 .save{
   margin-top: 15px;
   background-color: white;
-  border: none;
   border-radius: 15px;
   padding: 5px 10px 5px 10px;
   border: 1px solid black;
@@ -210,4 +222,8 @@ textarea:focus{
   border-radius: 15px;
   padding: 5px 10px 5px 10px;
   border: 1px solid black;
+}
+
+#click:hover{
+  cursor: pointer;
 }
