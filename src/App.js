@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './components/Header/Index';
 import Dashboard from './pages/Dashboard';
 import Trash from './pages/Trash';
 

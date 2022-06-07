@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MdDeleteForever, MdEdit, MdUndo } from 'react-icons/md';
 import PropTypes from 'prop-types';
-import EditNote from './EditNote';
+import EditNote from '../EditNote/Index';
 
 // eslint-disable-next-line no-unused-vars
 function Note({

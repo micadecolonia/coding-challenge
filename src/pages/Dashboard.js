@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
-import NotesList from '../components/NotesList';
-import SearchNote from '../components/SearchNote';
+import NotesList from '../components/NotesList/Index';
+import SearchNote from '../components/SearchNote/Index';
 import { addNote, deleteNote, editNote } from '../store/notesSlice';
 import { addToTrash } from '../store/trashSlice';
 
-import AddNote from '../components/AddNote';
+import AddNote from '../components/AddNote/Index';
 
 function Dashboard() {
   const { notes } = useSelector((state) => state.notes);

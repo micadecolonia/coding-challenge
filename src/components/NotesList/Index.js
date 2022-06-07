@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import Note from './Note';
-import AddNote from './AddNote';
+import Note from '../Note/Index';
+import AddNote from '../AddNote/Index';
 
 function NotesList({
   notes, handleAddNote, handleDeleteNote,

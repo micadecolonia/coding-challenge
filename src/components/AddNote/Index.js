@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import ColorSelector from './ColorSelector/Index';
+import ColorSelector from '../ColorSelector/Index';
 
 function AddNote({ handleAddNote }) {
   const [noteText, setNoteText] = useState('');

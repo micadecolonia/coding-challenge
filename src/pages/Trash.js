@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { MdOutlineArrowBack } from 'react-icons/md';
 import { FaRegGrinBeam } from 'react-icons/fa';
-import NotesList from '../components/NotesList';
+import NotesList from '../components/NotesList/Index';
 import { addToTrash, removeFromTrash, removeAllTrash } from '../store/trashSlice';
 import { addNote } from '../store/notesSlice';
 
