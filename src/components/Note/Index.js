@@ -23,8 +23,8 @@ function Note({
           />
         )
         : (
-          <div className="note" style={{ backgroundColor: note.color }}>
-            <div className="note-header">
+          <div className="flex flex-col rounded-xl p-4 h-60 break-words whitespace-pre-wrap" style={{ backgroundColor: note.color }}>
+            <div className="font-bold">
 
               {/* // If it is deleting, it does not show edit or delete icons */}
               {!isDelete ? (
@@ -33,8 +33,7 @@ function Note({
                   <MdDeleteForever
                     title="Delete note"
                     onClick={() => handleDeleteNote(note)}
-                    className="delete-icon"
-                    size="1.3em"
+                    className="h-6 w-6 inline float-right cursor-pointer"
                   />
                   <MdEdit
                     title="Edit note"
@@ -42,8 +41,7 @@ function Note({
                       setIselectedId(note.id);
                       handleIsEdit(true);
                     }}
-                    className="edit-icon"
-                    size="1.3em"
+                    className="h-6 w-6 inline float-right cursor-pointer"
                   />
                 </>
               )
@@ -51,7 +49,7 @@ function Note({
                   <MdUndo
                     title="Restore note"
                     onClick={() => handleRemoveFromTrash(note)}
-                    className="restore"
+                    className="h-6 w-6 p-0.5 inline float-right cursor-pointer rounded-2xl bg-white hover:bg-gray-200"
                   />
                 )}
               <small>{note.date}</small>
