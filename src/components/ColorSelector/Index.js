@@ -13,7 +13,7 @@ function ColorSelector({ handleChangeColor }) {
   };
 
   return (
-    <div className="mt-3.5">
+    <div>
       <ul className="flex flex-row gap-4 items-center">
         {colors.map((item, index) => (
           <li
