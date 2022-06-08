@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import EditNote from '../../src/components/EditNote';
+import EditNote from '../components/EditNote';
 
 test('renders editNote component', () => {
   const store = {
@@ -21,7 +21,7 @@ test('renders editNote component', () => {
   const component = render(
     <Provider store={store}>
       {' '}
-      // Set context
+      {/* Set context */}
       <EditNote
         note={note}
         handleEditNote={handleEditNote}

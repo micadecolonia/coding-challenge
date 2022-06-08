@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
-import Note from '../../src/components/Note';
+import Note from '../components/Note';
 
 test('renders editNote component', () => {
   const isEdit = false;
