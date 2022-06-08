@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import './styles.css';
 
 function ColorSelector({ handleChangeColor }) {
   const colors = ['#fe9b72', '#fec971', '#00d4fe', '#b693fd', '#e4ee91'];
@@ -14,13 +13,13 @@ function ColorSelector({ handleChangeColor }) {
   };
 
   return (
-    <div className="color_bar">
-      <ul className="color_bar_list">
+    <div className="mt-3.5">
+      <ul className="flex flex-row gap-4 items-center">
         {colors.map((item, index) => (
           <li
             // eslint-disable-next-line react/no-array-index-key
             key={index}
-            className="color_bar_list_item"
+            className="h-6 w-6 rounded-xl cursor-pointer border border-black hover:opacity-50"
             style={{ backgroundColor: item }}
             // eslint-disable-next-line react/destructuring-assignment
             onClick={() => {
