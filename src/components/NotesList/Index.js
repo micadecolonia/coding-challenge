@@ -7,7 +7,7 @@ function NotesList({
   handleRemoveFromTrash, isEdit, isDelete, handleIsEdit, handleEditNote,
 }) {
   return (
-    <div className="notes-list">
+    <div className="grid gap-4 grid-cols-250">
       {notes.map((note, index) => (
         <Note
           // eslint-disable-next-line react/no-array-index-key
