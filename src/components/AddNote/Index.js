@@ -27,11 +27,11 @@ function AddNote({ handleAddNote }) {
   };
 
   return (
-    <div className="note new" style={{ backgroundColor: noteColor }}>
-      <textarea rows="8" cols="10" placeholder="Type to add a note..." value={noteText} onChange={handleChange} style={{ backgroundColor: noteColor }} />
-      <div className="note-footer">
+    <div className="flex flex-col rounded-xl p-4 h-60 break-words whitespace-pre-wrap bg-gray-200" style={{ backgroundColor: noteColor }}>
+      <textarea className="border-0 resize-none bg-gray-200 focus:outline-0" rows="8" cols="10" placeholder="Type to add a note..." value={noteText} onChange={handleChange} style={{ backgroundColor: noteColor }} />
+      <div className="flex justify-between items-center">
         <ColorSelector handleChangeColor={handleChangeColor} />
-        <button title="Save note" type="button" className="save" onClick={handleSaveClick}>Save</button>
+        <button title="Save note" type="button" className="border border-black cursor-pointer rounded-3xl bg-white hover:bg-gray-400 p-1.5" onClick={handleSaveClick}>Save</button>
       </div>
     </div>
   );
