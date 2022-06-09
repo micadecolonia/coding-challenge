@@ -27,10 +27,10 @@ function EditNote({ note, handleEditNote, handleIsEdit }) {
   };
 
   return (
-    <div className="note new">
-      <textarea rows="8" cols="10" placeholder="Type to add a note..." value={noteText.text} onChange={handleChange} />
-      <div className="note-footer">
-        <button type="button" className="save" onClick={handleEditClick}>Edit</button>
+    <div className="flex flex-col rounded-xl p-4 h-60 break-words whitespace-pre-wrap bg-gray-200">
+      <textarea className="border-0 resize-none bg-gray-200 focus:outline-0" rows="8" cols="10" placeholder="Type to add a note..." value={noteText.text} onChange={handleChange} />
+      <div className="flex justify-between items-center">
+        <button type="button" className="border border-black cursor-pointer rounded-3xl bg-white hover:bg-gray-400 p-1.5" onClick={handleEditClick}>Edit</button>
       </div>
     </div>
   );
