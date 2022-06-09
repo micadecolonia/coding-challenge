@@ -28,11 +28,11 @@ function Trash() {
 
   return (
     <>
-      <div className="control-btns">
-        <Link to="/" className="back-lnk">
+      <div className="flex justify-between items-center mb-6">
+        <Link to="/" className="border border-black relative bg-white hover:bg-gray-400 text-black cursor-pointer rounded-3xl p-2.5">
           <MdOutlineArrowBack title="Go back to dashboard" />
         </Link>
-        <button title="Permanently delete all notes" type="button" id="delete-all-btn" onClick={removeAllT}>
+        <button className="relative bg-white hover:bg-gray-400 border border-black text-black cursor-pointer rounded-3xl p-1.5" title="Permanently delete all notes" type="button" id="delete-all-btn" onClick={removeAllT}>
           Permanently delete all notes
         </button>
       </div>
@@ -52,9 +52,9 @@ function Trash() {
           />
         )
         : (
-          <div className="empty-trash">
-            <h2 id="trash-txt">Yay! There are no elements in the trash!</h2>
-            <FaRegGrinBeam id="happy-icn" title="Happy face" size="1.3em" />
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-2xl">Yay! There are no elements in the trash!</h2>
+            <FaRegGrinBeam className="text-xl font-bold mt-1.5" title="Happy face" />
           </div>
         )}
 
