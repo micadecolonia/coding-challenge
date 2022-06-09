@@ -59,8 +59,8 @@ function Dashboard() {
           />
         )
         : (<AddNote handleAddNote={addN} />)}
-      <footer className="signature">
-        <button id="click" className="signature" type="button" onClick={handleClick} title="Click me" size="1.3em">
+      <footer className="flex items-center justify-center m-2.5">
+        <button id="click" className="text-sm border border-black rounded-2xl p-0.5 cursor-pointer" type="button" onClick={handleClick} title="Click me" size="1.3em">
           {' '}
           {buttonText}
           {' '}
