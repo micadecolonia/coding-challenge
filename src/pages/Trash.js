@@ -53,8 +53,8 @@ function Trash() {
         )
         : (
           <div className="flex flex-col items-center justify-center">
-            <h2 className="text-2xl">Yay! There are no elements in the trash!</h2>
-            <FaRegGrinBeam className="text-xl font-bold mt-1.5" title="Happy face" />
+            <h2 className="text-2xl dark:text-white">Yay! There are no elements in the trash!</h2>
+            <FaRegGrinBeam className="text-xl font-bold mt-1.5 dark:text-white" title="Happy face" />
           </div>
         )}
 

@@ -22,9 +22,9 @@ function Header({ handleToggleDarkMode }) {
 
   return (
     <div className="flex justify-between items-center mt-5 mb-5">
-      <h1 className="flex-[2_2_0%] text-3xl text-black font-bold">{HeaderView()}</h1>
-      <MdOutlineDarkMode className="rounded-2xl h-7 w-7 text-black cursor-pointer hover:bg-gray-200" title="Enable or disable dark mode" onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)} />
-      <MdDeleteForever className="rounded-2xl h-7 w-7 text-red-600 cursor-pointer hover:bg-gray-200" title="Go to the trash screen" onClick={() => history.push('/trash')} />
+      <h1 className="flex-[2_2_0%] text-3xl text-black font-bold dark:text-white">{HeaderView()}</h1>
+      <MdOutlineDarkMode className="rounded-2xl h-7 w-7 text-black cursor-pointer hover:bg-gray-200 dark:text-white dark:hover:bg-gray-400" title="Enable or disable dark mode" onClick={() => handleToggleDarkMode((previousDarkMode) => !previousDarkMode)} />
+      <MdDeleteForever className="rounded-2xl h-7 w-7 text-red-600 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-400" title="Go to the trash screen" onClick={() => history.push('/trash')} />
       <p className="text-lg text-red-600 font-bold">{totalNotes}</p>
     </div>
   );
