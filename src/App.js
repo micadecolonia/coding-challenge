@@ -12,17 +12,19 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={`${darkMode && 'dark-mode'}`}>
-      <div className="mx-auto px-4 min-h-screen max-w-4xl">
-        <Router>
-          <div className="App">
-            <Header handleToggleDarkMode={setDarkMode} />
-            <Switch>
-              <Route exact path="/" component={Dashboard} />
-              <Route path="/trash" component={Trash} />
-            </Switch>
-          </div>
-        </Router>
+    <div className={`${darkMode && 'dark'} ${darkMode === 'dark' ? 'bg-black' : 'bg-white'}`}>
+      <div className="dark:bg-black">
+        <div className="mx-auto px-4 min-h-screen">
+          <Router>
+            <div className="App">
+              <Header handleToggleDarkMode={setDarkMode} />
+              <Switch>
+                <Route exact path="/" component={Dashboard} />
+                <Route path="/trash" component={Trash} />
+              </Switch>
+            </div>
+          </Router>
+        </div>
       </div>
     </div>
 
