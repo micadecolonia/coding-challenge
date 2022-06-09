@@ -14,7 +14,7 @@ function ColorSelector({ handleChangeColor }) {
 
   return (
     <div>
-      <ul className="flex flex-row gap-4 items-center">
+      <ul className="flex flex-row gap-3 items-center">
         {colors.map((item, index) => (
           <li
             // eslint-disable-next-line react/no-array-index-key
