@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className={`${darkMode && 'dark-mode'}`}>
-      <div className="container">
+      <div className="mx-auto px-4 min-h-screen max-w-4xl">
         <Router>
           <div className="App">
             <Header handleToggleDarkMode={setDarkMode} />
