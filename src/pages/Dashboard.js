@@ -59,7 +59,7 @@ function Dashboard() {
           />
         )
         : (<AddNote handleAddNote={addN} />)}
-      <footer className="flex items-center justify-center m-2.5">
+      <footer className="flex items-center justify-center mt-2">
         <button className="text-sm border border-black rounded-2xl p-0.5 cursor-pointer" type="button" onClick={handleClick} title="Click me" size="1.3em">
           {' '}
           {buttonText}
